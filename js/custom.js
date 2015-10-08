@@ -48,7 +48,7 @@ $(window).load(function() {
     }
 
     function showElements() {
-        $(".row > div.col").each(function () {
+        $(".row > .col").each(function () {
             _this = $(this);
             if (isInView(_this)) {
                 changeEase(_this, "cubic-bezier(0.175, 0.885, 0.320, 1.275)", 600)

@@ -1,7 +1,7 @@
-  .container > .timeline:before {
+  body:before {
     content: '';
     position: absolute;
-    height: 110vh;
+    height: 100%;
     width: 4px;
     background: #00796b;
     -webkit-transition: all .5s;
@@ -9,6 +9,11 @@
     -o-transition: all .5s;
     -ms-transition: all .5s;
     transition: all .5s;
+  }
+  nav{
+    position: relative;
+  }
+  .timeline > .row {
   }
   .timeline > .row > div{
     -webkit-transition: all .5s;
@@ -112,9 +117,14 @@
    footer{
      position: relative;
    }
-
+@media (max-width: 380px)
+{
+  body:before {
+    left: 15px !important;
+  }
+}
 @media (max-width: 600px) {
-  .container > .timeline:before {
+  body:before {
     left: 30px;
   }
   .timeline > .row > div:not(.clearfix) {
@@ -129,7 +139,7 @@
 
 }
 @media (min-width: 600px) {
-  .container > .timeline:before {
+  body:before {
     left: calc(50% - 2px);
   }
   .timeline > .row > .t-row:nth-of-type(even) {
