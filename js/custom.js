@@ -1,11 +1,26 @@
 $(window).load(function() {
 
-  $("body").animate({
-    marginTop:"0",
-    opacity:1
-  },500,function(){
-    Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1000,"teal lighten-1 white-text")
-  });
+  function pageOpen(){
+    $("body").animate({
+      marginTop:"0",
+      opacity:1
+    },500,function(){
+      Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1000,"teal lighten-1 white-text");
+    });
+  }
+  pageOpen();
+  function pageClose(link){
+    var link = link;
+    if(!link || link == "#")
+      return false;
+    $("body").animate({
+      marginTop:"+100px",
+      opacity:0
+    },500,function(){
+      window.location.href = link;
+    });
+  }
+
 
   $(".timeline > .row > .t-row:nth-of-type(even)").each(function () {
         prev = $(this).prev();
@@ -17,6 +32,14 @@ $(window).load(function() {
         }
     });
 
+    $("a").each(function(e){
+      var href = $(this).attr("href");
+      $(this).on("click",function(event){
+        event.preventDefault();
+        pageClose(href)
+      });
+
+    })
     /* $(".timeline > .row > div:last-child").css({
           marginBottom: $(".timeline > .row > div:last-child").height()*0.50,
     }); */
