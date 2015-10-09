@@ -1,0 +1,36 @@
+
+
+@media (max-width: 380px) {
+
+}
+@media (max-width: 600px) {
+  .t-row .date{
+    float: right;
+  }
+  .t-row .linkLine{
+    float: left;
+
+  }
+}
+@media (min-width: 600px) {
+  .t-row:nth-of-type(even) .card-action{
+    direction:rtl;
+  }
+  .t-row:nth-of-type(odd) .card-action{
+    direction:ltr;
+  }
+  .t-row:nth-of-type(odd) .date{
+    float: left;
+  }
+  .t-row:nth-of-type(even) .date{
+    float: right;
+    direction:ltr;
+  }
+  .t-row:nth-of-type(odd) .linkLine{
+    float: right;
+
+  }
+  .t-row:nth-of-type(even) .linkLine{
+    float: left;
+  }
+}

@@ -1,163 +1,85 @@
-  body:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 4px;
-    background: #00796b;
+  .loginFly, .signupFly {
+    position: relative;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -o-transition: all .5s;
     -ms-transition: all .5s;
     transition: all .5s;
   }
-  nav{
-    position: relative;
-  }
-  .timeline > .row {
-  }
-  .timeline > .row > div{
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    -ms-transition: all .5s;
-    transition: all .5s;
-  }
-  .loginFly , .signupFly{
-    position: relative;
-    -webkit-transition: all .5s ;
-    -moz-transition: all .5s ;
-    -o-transition: all .5s;
-    -ms-transition: all .5s;
-    transition: all .5s;
-  }
-  .card-content{
+  .card-content {
     overflow: auto;
   }
-  .card .card-action
-  {
+  .card .card-action {
     border-top: 0;
   }
   .card-action > a {
-    color :#00796b !important;
+    color: #00796b !important;
   }
-  .card-title{
-    color:#4db6ac !important;
+  .card-title {
+    color: #4db6ac !important;
   }
-/* label color */
-   .input-field label {
-     color: #4db6ac;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label,
-   .input-field input[type=password]:focus + label,
-   .input-field input[type=email]:focus + label {
-     color: #4db6ac;
-   }
-   input[type=text],
-   input[type=password],
-   input[type=email]
-   {
-     border-bottom: 1px solid #4db6ac;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus,
-   .input-field input[type=password]:focus,
-   .input-field input[type=email]:focus {
-     border-bottom: 1px solid #4db6ac;
-     box-shadow: 0 1px 0 0 #4db6ac;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #4db6ac;
-   }
-   input[type=text]:focus:not([readonly]),
-   input[type=password]:focus:not([readonly]),
-   input[type=email]:focus:not([readonly])
-   {
-     border-bottom: 1px solid #4db6ac;
-      box-shadow: 0 1px 0 0 #4db6ac;
-   }
+  /* label color */
 
-   .m6 > .icon-column {
-       text-align: center;
-       width: 40px;
-       height: 40px;
-       position: absolute;
-       background: #009688;
-       border-radius: 50%;
-       border: 2px solid #FFF;
-   }
-   .divider > .material-icons{
-     vertical-align: middle;
-   }
-   .m6 > .icon-column > i {
-     line-height: 36px;
-     color: #fff;
-   }
-   .no-shadow{
-     box-shadow: none;
-   }
+  .input-field label {
+    color: #4db6ac;
+  }
+  /* label focus color */
 
-   .timeline > .row > div:not(.clearfix) {
-     margin-top: 15px;
-     position: relative;
-   }
-   .flip-right{
-     -webkit-transform: scale(-1, 1);
-     -ms-transform: scale(-1, 1);
-     transform: scale(-1, 1);
-   }
-   .divider{
-     min-height: 40px;
-     height: auto;
-     font-size: 1.1em;
-     line-height: 40px ;
-     color:#fff;
-   }
-   footer{
-     position: relative;
-   }
-@media (max-width: 380px)
-{
-  body:before {
-    left: 15px !important;
+  .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label, .input-field input[type=email]:focus + label {
+    color: #4db6ac;
   }
-}
-@media (max-width: 600px) {
-  body:before {
-    left: 30px;
+  input[type=text], input[type=password], input[type=email] {
+    border-bottom: 1px solid #4db6ac;
   }
-  .timeline > .row > div:not(.clearfix) {
-      margin-left:;
+  /* label underline focus color */
+
+  .input-field input[type=text]:focus, .input-field input[type=password]:focus, .input-field input[type=email]:focus {
+    border-bottom: 1px solid #4db6ac;
+    box-shadow: 0 1px 0 0 #4db6ac;
+  }
+  /* icon prefix focus color */
+
+  .input-field .prefix.active {
+    color: #4db6ac;
+  }
+  input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #4db6ac;
+    box-shadow: 0 1px 0 0 #4db6ac;
+  }
+  @media (max-width: 380px) {
+    body:before {
+      left: 15px !important;
+    }
+  }
+  @media (max-width: 600px) {
+    body:before {
+      left: 30px;
+    }
+    .timeline > .row > div:not(.clearfix) {
+      margin-left: ;
       margin-top: 15px !important;
+    }
+    .timeline > .row > .t-row > .icon-column {
+      left: -20px;
+      top: 10px;
+    }
   }
-  .timeline > .row > .t-row > .icon-column
-  {
-    left:-20px;
-    top: 10px;
-  }
-
-}
-@media (min-width: 600px) {
-  body:before {
-    left: calc(50% - 2px);
-  }
-  .timeline > .row > .t-row:nth-of-type(even) {
+  @media (min-width: 600px) {
+    body:before {
+      left: calc(50% - 2px);
+    }
+    .timeline > .row > .t-row:nth-of-type(even) {
       float: right !important;
+    }
+    .timeline > .row > div.m6 {
+      width: 48%;
+    }
+    .timeline > .row > .t-row:nth-of-type(n) > .icon-column {
+      right: -20px;
+      top: 10px;
+    }
+    .timeline > .row > .t-row:nth-of-type(2n) > .icon-column {
+      left: -20px;
+      top: 10px;
+    }
   }
-  .timeline > .row > div.m6
-  {
-    width: 48%;
-  }
-  .timeline > .row > .t-row:nth-of-type(n) > .icon-column
-  {
-    right: -20px;
-    top: 10px;
-  }
-  .timeline > .row > .t-row:nth-of-type(2n) > .icon-column
-  {
-    left:-20px;
-    top: 10px;
-  }
-
-}

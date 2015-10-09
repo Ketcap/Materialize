@@ -9,14 +9,26 @@
   <!-- CSS  -->
   <link href="css/icon.css" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
 
   <nav class="teal lighten-2" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="login.html" class="brand-logo center waves-effect waves-light">Material Timeline</a>
+    <div class="nav-wrapper container ">
+      <a id="logo-container" href="#" class="brand-logo">Materialize Timeline</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="btn-flat white-text transparent" href="#">About Site ...</a></li>
+        <li><a class="btn-flat white-text transparent" href="#">Who Are We ?</a></li>
+        <li><a class="btn-flat white-text transparent" href="#">Donate</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+        <li><a class="btn-flat transparent" href="#">About Site ... <i class="material-icons left">code</i></a></li>
+        <li><a class="btn-flat transparent" href="#">Who Are We ? <i class="material-icons left">public</i></a></li>
+        <li><a class="btn-flat transparent" href="#">Donate <i class="material-icons left">payment</i></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
   <div class="container">

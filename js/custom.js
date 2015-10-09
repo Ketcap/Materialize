@@ -1,15 +1,16 @@
-$(window).load(function() {
 
-  function pageOpen(){
+
+ var pageOpen = (function () {
     $("body").animate({
       marginTop:"0",
       opacity:1
     },500,function(){
       Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1000,"teal lighten-1 white-text");
     });
-  }
+  })
   pageOpen();
-  function pageClose(link){
+
+   var pageClose = (function (link) {
     var link = link;
     if(!link || link == "#")
       return false;
@@ -19,13 +20,14 @@ $(window).load(function() {
     },500,function(){
       window.location.href = link;
     });
-  }
+  });
 
 
-  $(".timeline > .row > .t-row:nth-of-type(even)").each(function () {
+  $(".timeline > .row > .t-row").each(function () {
         prev = $(this).prev();
         if(prev.hasClass("t-row")){
           prevHeight = prev.height();
+          prevHeight = (prevHeight <= 200 ? 100 : prevHeight);
           $(this).css({
               marginTop: prevHeight / 2 + "px",
           })
@@ -36,7 +38,7 @@ $(window).load(function() {
       var href = $(this).attr("href");
       $(this).on("click",function(event){
         event.preventDefault();
-        pageClose(href)
+        pageClose(href);
       });
 
     })
@@ -97,8 +99,6 @@ $(window).load(function() {
 
     $(window).scroll(function () {
         showElements();
-    })
+    });
 
-
-
-});
+    $('.button-collapse').sideNav();
