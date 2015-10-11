@@ -1661,10 +1661,13 @@ html {
  * Remove default margin.
  */
 body {
-    margin: -100px 0px 0px 0px;
-    opacity: 0;
+    margin: 0px;
+    opacity: 1;
   }
-
+nav , .container , footer{
+  margin-top: -100px;
+  opacity: 0;
+}
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -2133,7 +2136,7 @@ ul.staggered-list li {
 /*********************
   Media Query Classes
 **********************/
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 601px) {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important; } }
 
@@ -2145,7 +2148,7 @@ ul.staggered-list li {
   .hide-on-med-and-up {
     display: none !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) {
   .hide-on-med-only {
     display: none !important; } }
 
@@ -2157,11 +2160,11 @@ ul.staggered-list li {
   .show-on-large {
     display: initial !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) {
   .show-on-medium {
     display: initial !important; } }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 601px) {
   .show-on-small {
     display: initial !important; } }
 
@@ -2173,7 +2176,7 @@ ul.staggered-list li {
   .show-on-medium-and-down {
     display: initial !important; } }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 601px) {
   .center-on-small-only {
     text-align: center; } }
 
@@ -5679,8 +5682,8 @@ small {
   height: 48px;
   line-height: 48px;
   padding: 0 25px;
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
   color: #fff;
   display: -webkit-box;
   display: -moz-box;

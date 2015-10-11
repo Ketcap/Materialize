@@ -1,14 +1,17 @@
 
 
  var pageOpen = (function () {
-    $("body").animate({
+    $("body").addClass("line");
+    $("nav , .container , footer").animate({
       marginTop:"0",
       opacity:1
-    },500,function(){
-      Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1000,"teal lighten-1 white-text");
-    });
+    },500);
   })
-  pageOpen();
+  Pace.on("done",function(){
+    pageOpen();
+    Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1500,"teal lighten-1 white-text");
+    
+  });
 
    var pageClose = (function (link) {
     var link = link;
@@ -100,5 +103,9 @@
     $(window).scroll(function () {
         showElements();
     });
+
+    $("body").on("touchmove",function(){
+      showElements();
+    })
 
     $('.button-collapse').sideNav();

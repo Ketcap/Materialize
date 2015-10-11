@@ -1,5 +1,9 @@
-
-
+.date{
+  font-size: .8em;
+}
+.linkLine{
+  color:#757575 !important;
+}
 @media (max-width: 380px) {
 
 }

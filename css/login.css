@@ -47,39 +47,11 @@
     box-shadow: 0 1px 0 0 #4db6ac;
   }
   @media (max-width: 380px) {
-    body:before {
-      left: 15px !important;
-    }
+    
   }
   @media (max-width: 600px) {
-    body:before {
-      left: 30px;
-    }
-    .timeline > .row > div:not(.clearfix) {
-      margin-left: ;
-      margin-top: 15px !important;
-    }
-    .timeline > .row > .t-row > .icon-column {
-      left: -20px;
-      top: 10px;
-    }
+
   }
   @media (min-width: 600px) {
-    body:before {
-      left: calc(50% - 2px);
-    }
-    .timeline > .row > .t-row:nth-of-type(even) {
-      float: right !important;
-    }
-    .timeline > .row > div.m6 {
-      width: 48%;
-    }
-    .timeline > .row > .t-row:nth-of-type(n) > .icon-column {
-      right: -20px;
-      top: 10px;
-    }
-    .timeline > .row > .t-row:nth-of-type(2n) > .icon-column {
-      left: -20px;
-      top: 10px;
-    }
+
   }
