@@ -4,6 +4,9 @@
 .linkLine{
   color:#757575 !important;
 }
+.t-row{
+  padding: 0 !important;
+}
 @media (max-width: 380px) {
 
 }

@@ -1,10 +1,10 @@
 
 .line:before {
   content: '';
-  position: absolute;
+  position: fixed;
   height:100%;
   width: 4px;
-  background: #26a69a;
+  background: #4db6ac;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -o-transition: all .5s;
@@ -28,15 +28,14 @@ nav {
   position: absolute;
   background: #4db6ac;
   border-radius: 50%;
-  text-align: center;
   border:2px solid #FFF;
 }
+
 .divider > .material-icons {
   vertical-align: middle;
 }
 .m6 > .icon-column > i {
   line-height: 36px;
-  text-align: center;
   color:#FFF ;
 }
 .no-shadow {
@@ -87,7 +86,10 @@ footer {
     left: calc(50% - 2px);
   }
   .timeline > .row > .t-row:nth-of-type(even) {
-    float: right !important;
+    float:right;
+  }
+  .timeline > .row > .t-row:nth-of-type(odd){
+    clear:both;
   }
   .timeline > .row > div.m6 {
     width: 48%;

@@ -1650,17 +1650,26 @@
  *    user zoom.
  */
 html {
+  height:100%;
+
+  width: 100%;
+
+  overflow: auto;
+
   font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+/* 2 */ }
 
 /**
  * Remove default margin.
  */
 body {
+  height:100%;
+
+  width: 100%;
     margin: 0px;
     opacity: 1;
   }
@@ -5561,7 +5570,7 @@ small {
 .card {
   position: relative;
   overflow: hidden;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px; }
@@ -5858,17 +5867,17 @@ small {
   .btn-floating i {
     width: inherit;
     display: inline-block;
-    text-align: center;
     color: #fff;
     font-size: 1.6rem;
     line-height: 37px; }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
-    width: 55.5px;
-    height: 55.5px; }
+    width: 56px;
+    height: 56px; }
     .btn-floating.btn-large i {
-      line-height: 55.5px; }
+      line-height: 56px;
+    text-align: center;}
 
 button.btn-floating {
   border: none; }
