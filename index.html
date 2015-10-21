@@ -21,12 +21,12 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Timeline</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#" class="btn-flat white-text transparent">Home <i class="material-icons left">home</i></a></li>
+        <li><a href="index.html" class="btn-flat white-text transparent">Home <i class="material-icons left">home</i></a></li>
         <li><a class="dropdown-button btn-flat white-text transparent" href="#" data-activates="dropdown1">Profile <i class="material-icons left">arrow_drop_down</i></a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav" style="left: -250px;">
-        <li><a href="#" class="btn-flat transparent">Home <i class="material-icons left">home</i></a></li>
-        <li><a href="#" class="btn-flat transparent">Profile <i class="material-icons left">account_circle</i></a></li>
+        <li><a href="index.html" class="btn-flat transparent">Home <i class="material-icons left">home</i></a></li>
+        <li><a href="#" class="btn-flat transparent">Me <i class="material-icons left">account_circle</i></a></li>
         <li><a href="#" class="btn-flat transparent">Messages <i class="material-icons left">message</i></a></li>
         <li><a href="#" class="btn-flat transparent">Settings <i class="material-icons left">tune</i></a></li>
         <li><a href="#" class="btn-flat transparent logout">Sign out <i class="material-icons left">power_settings_new</i></a></li>
@@ -42,20 +42,35 @@
   </nav>
   <!-- Nav Ends -->
 
+  <!-- Modal Starts  -->
+
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Create New Line</h4>
+        <br>
+        <div class="input-field">
+          <input id="titleofNewLine" type="text" class="teal-text" spellcheck="false">
+          <label for="titleofNewLine">Please Enter Title Of New Line</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="create.html" class=" waves-effect waves-green btn-flat">Create</a>
+      </div>
+    </div>
+
+
+  <!-- Modal Ends  -->
 
   <!-- Container Starts -->
   <div class="container">
     <!-- Fab Starts  -->
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-      <a class="btn-floating btn-large red ">
-        <i class="material-icons">mode_edit</i>
+      <a class="btn-floating btn-large red btn" id="add" data-target="modal1">
+        <i class="material-icons">add</i>
       </a>
-      <ul class="vertical-align">
-        <li><a class="btn-floating red"><i class="material-icons left">insert_chart</i></i></a></li>
-        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-      </ul>
+      <div class="fab-in">
+
+      </div>
     </div>
     <!-- Fab Ends -->
     <div class="timeline">

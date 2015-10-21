@@ -1,0 +1,46 @@
+
+.title > div > input[type=text] {
+  border-bottom: 1px solid #FFF;
+  text-indent: 5px;
+  font-size: 1.2em;
+}
+.title > div > .input-field input[type=text]:focus{
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 1px 0 0 #FFF;
+  font-size: 1.2em;
+  text-indent:10px;
+}
+.title > div > input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 1px 0 0 #FFF;
+}
+.title{
+  padding: 35px 10px 10px 10px !important;
+}
+
+:not(.title) > div > input[type=text] {
+  border-bottom: 1px solid #4db6ac;
+  text-indent: 5px;
+  font-size: 1.2em;
+}
+:not(.title) > div > .input-field input[type=text]:focus{
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+  font-size: 1.2em;
+  text-indent:10px;
+}
+:not(.title) > div > input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+
+@media (max-width: 380px) {
+
+}
+@media (max-width: 600px) {
+
+}
+@media (min-width: 600px) {
+
+}

@@ -7,6 +7,21 @@
 .t-row{
   padding: 0 !important;
 }
+.modal > div > input[type=text] {
+  border-bottom: 1px solid #009688;
+  text-indent: 5px;
+  font-size: 1.2em;
+}
+.modal > div > .input-field input[type=text]:focus{
+  border-bottom: 1px solid #009688;
+  box-shadow: 0 1px 0 0 #009688;
+  font-size: 1.2em;
+  text-indent:10px;
+}
+.modal > div > input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #009688;
+  box-shadow: 0 1px 0 0 #009688;
+}
 @media (max-width: 380px) {
 
 }

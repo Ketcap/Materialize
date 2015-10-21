@@ -5865,7 +5865,6 @@ small {
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating i {
-    width: inherit;
     display: inline-block;
     color: #fff;
     font-size: 1.6rem;
@@ -5889,6 +5888,10 @@ button.btn-floating {
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 998; }
+  .fixed-action-btn > a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
   .fixed-action-btn ul {
     left: 0;
     right: 0;

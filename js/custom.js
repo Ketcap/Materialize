@@ -10,7 +10,7 @@
 
   var pageClose = (function (link) {
    var link = link;
-   if(!link || link == "#")
+   if(!link || link == "#" )
      return false;
      $("body").animate({
        marginTop:"+100px",
@@ -22,9 +22,26 @@
 
     Pace.on("done",function(){
       pageOpen();
-      Materialize.toast('<b> Yeeeeey Page Loaded </b>&nbsp;<i class="material-icons">done</i>', 1500,"teal lighten-1 white-text");
+      Materialize.toast('Yeeeeey Page Loaded &nbsp;<i class="material-icons">done</i>', 1500,"teal lighten-1 white-text");
       reDesignrow();
       $(".dropdown-button").dropdown();
+      $('.button-collapse').sideNav();
+      $('#add').leanModal({
+          dismissible:true,
+          complete:function(a){
+            _this = $("#add");
+            changeEase(_this, "linear", 200);
+            _this.css({
+              'transform':"rotate(0)",
+            });
+          },
+          ready:function(a){
+            _this = $("#add");
+            _this.css({
+              'transform':"rotate(45deg)",
+            });
+          }
+      });
     });
 
   function reDesignrow(){
@@ -45,7 +62,7 @@
         event.preventDefault();
         pageClose(href);
       });
-    })
+    });
     /* $(".timeline > .row > div:last-child").css({
           marginBottom: $(".timeline > .row > div:last-child").height()*0.50,
     }); */
@@ -107,6 +124,12 @@
 
     $("body").on("touchmove",function(){
       showElements();
-    })
+    });
 
-    $('.button-collapse').sideNav();
+// Fab Save Start
+
+  $("#save").on("click",function(){
+    // Ajax Query and result shown
+    Materialize.toast("Your Line Is Saved Succesfully &nbsp; <i class='material-icons'>done</i>",1000,"teal lighten-1 white-text")
+  });
+// Fab Save End
