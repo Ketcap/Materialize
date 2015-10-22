@@ -7,6 +7,10 @@
 .t-row{
   padding: 0 !important;
 }
+.textLine{
+  margin-left: 2em;
+  border-radius: 0 !important;
+}
 .modal > div > input[type=text] {
   border-bottom: 1px solid #009688;
   text-indent: 5px;
@@ -22,16 +26,23 @@
   border-bottom: 1px solid #009688;
   box-shadow: 0 1px 0 0 #009688;
 }
+.icon-column > i {
+  font-size:1.3em !important;
+}
 @media (max-width: 380px) {
 
 }
 @media (max-width: 600px) {
-  .t-row .date{
+  .t-row:nth-of-type(odd) .card-action > * {
     float: right;
+    direction: ltr;
+  }
+  .t-row:nth-of-type(even) .card-action > *{
+    float: right;
+    direction:ltr;
   }
   .t-row .linkLine{
     float: left;
-
   }
 }
 @media (min-width: 600px) {
@@ -41,18 +52,15 @@
   .t-row:nth-of-type(odd) .card-action{
     direction:ltr;
   }
-  .t-row:nth-of-type(odd) .date{
+
+  .t-row:nth-of-type(odd) .card-action > * {
     float: left;
+    direction: ltr;
   }
-  .t-row:nth-of-type(even) .date{
+  .t-row:nth-of-type(even) .card-action > *{
     float: right;
     direction:ltr;
   }
-  .t-row:nth-of-type(odd) .linkLine{
-    float: right;
 
-  }
-  .t-row:nth-of-type(even) .linkLine{
-    float: left;
-  }
+
 }

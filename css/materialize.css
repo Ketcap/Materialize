@@ -5077,7 +5077,7 @@ nav ul a span.badge {
 .row {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;}
   .row:after {
     content: "";
     display: table;
@@ -5883,8 +5883,6 @@ button.btn-floating {
 
 .fixed-action-btn {
   position: fixed;
-  right: 23px;
-  bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 998; }
@@ -5900,7 +5898,8 @@ button.btn-floating {
     bottom: 64px;
     margin: 0; }
     .fixed-action-btn ul li {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+    }
     .fixed-action-btn ul a.btn-floating {
       opacity: 0; }
 

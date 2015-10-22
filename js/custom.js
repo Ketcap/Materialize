@@ -1,5 +1,4 @@
 
-
  var pageOpen = (function () {
     $("body").addClass("line");
     $("nav , .container , footer").animate({
@@ -26,6 +25,7 @@
       reDesignrow();
       $(".dropdown-button").dropdown();
       $('.button-collapse').sideNav();
+      $('.tooltipped').tooltip({delay:0});
       $('#add').leanModal({
           dismissible:true,
           complete:function(a){
@@ -42,6 +42,7 @@
             });
           }
       });
+
     });
 
   function reDesignrow(){
@@ -57,8 +58,8 @@
   }
 
     $("a").each(function(e){
-      var href = $(this).attr("href");
       $(this).on("click",function(event){
+        var href = $(this).attr("href");
         event.preventDefault();
         pageClose(href);
       });
@@ -66,6 +67,39 @@
     /* $(".timeline > .row > div:last-child").css({
           marginBottom: $(".timeline > .row > div:last-child").height()*0.50,
     }); */
+
+    var fabStatus = false;
+    $(".fabMore > a.red").on("click",function(){
+      button = $(this);
+      if(fabStatus){
+        fabStatus = false;
+        button.css({
+          'transform':"rotate(0deg)"
+        });
+        $(".fabMore").closeFAB();
+
+        setTimeout(function () {
+          $(".fab_in").css('display','none');
+        }, 250);
+
+          $(".fab_in > li > a").off("click");
+      }
+      else{
+        $(".fab_in").css({
+          display:"inherit",
+        });
+        button.css({
+          'transform':"rotate(90deg)"
+        });
+        fabStatus = true;
+        $(".fab_in > li > a").on("click",function(){
+          $(".fabMore > a").trigger("click");
+        });
+
+        $(".fabMore").openFAB();
+      }
+
+    });
 
     function isInView(ele) {
         var $ele = $(ele);
@@ -96,8 +130,8 @@
     function showElements() {
         $(".row > .col").each(function () {
             _this = $(this);
+            changeEase(_this, "cubic-bezier(0.175, 0.885, 0.320, 1.275)", 500);
             if (isInView(_this)) {
-                changeEase(_this, "cubic-bezier(0.175, 0.885, 0.320, 1.275)", 600)
                 _this.css({
                     "-ms-transform": "scale(1)",
                     /* IE 9 */
@@ -106,7 +140,6 @@
                     "transform": "scale(1)",
                 })
             } else {
-                changeEase(_this, "cubic-bezier(0.680, -0.550, 0.265, 1.550)", 600)
                 _this.css({
                     "-ms-transform": "scale(0)",
                     /* IE 9 */
@@ -118,18 +151,6 @@
         })
     }
 
-    $(window).scroll(function () {
+    $(window).on("scroll , touchmove",function () {
         showElements();
     });
-
-    $("body").on("touchmove",function(){
-      showElements();
-    });
-
-// Fab Save Start
-
-  $("#save").on("click",function(){
-    // Ajax Query and result shown
-    Materialize.toast("Your Line Is Saved Succesfully &nbsp; <i class='material-icons'>done</i>",1000,"teal lighten-1 white-text")
-  });
-// Fab Save End

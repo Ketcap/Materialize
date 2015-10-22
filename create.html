@@ -9,6 +9,7 @@
     <!-- CSS  -->
   <link href="pace/pace-theme-minimal.css" rel="stylesheet" />
   <link href="css/icon.css" rel="stylesheet">
+  <link href="css/socicon.css" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/create.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -45,38 +46,29 @@
 
   <!-- Container Starts -->
   <div class="container">
-    <!-- Fab Starts  -->
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-      <a class="btn-floating btn-large red" id="save">
-        <i class="material-icons">save</i>
-      </a>
-      <div class="fab-in">
-
-      </div>
-    </div>
-    <!-- Fab Ends -->
     <div class="timeline">
       <div class="row">
-
-
-        <div class="col offset-s1 s11 m6 z-depth-1 cyan center hoverable title t-row">
+        <div class="col offset-s1 s11 m6 z-depth-1 center hoverable title t-row">
             <div class="input-field">
-            <input id="title" type="text" class="white-text" spellcheck="false">
-            <label for="title" class="white-text">Title Of The Line</label>
+            <input id="title" type="text" class="black-text" spellcheck="false">
+            <label for="title" class="black-text">Title Of The Line</label>
           </div>
         </div>
 
         <div class="col offset-s1 s11 m6 z-depth-1 white t-row hoverable">
-          <div class="card no-shadow">
+          <div class="card no-shadow center">
             <div class="card-content valign-wrapper">
               <div class="input-field col s12">
                 <textarea id="linetext-1" class="materialize-textarea"></textarea>
                 <label for="linetext-1">Content</label>
               </div>
             </div>
-            <div class="card-action">
-              a.btn-floating
+            <div class="card-action center-block row">
+                <a href="#" class="btn-flat col tooltipped" data-position="bottom" data-tooltip="Photo"><i class="material-icons left">photo</i> <span class="hide-on-med-and-down">Add Photo</span></a>
+                <a href="#" class="btn-flat col tooltipped" data-position="bottom" data-tooltip="Video"><i class="material-icons left">videocam</i> <span class="hide-on-med-and-down">Add Video</span></a>
+                <a href="#" class="btn-flat col tooltipped" data-position="bottom" data-tooltip="Link"><i class="material-icons left">link</i> <span class="hide-on-med-and-down">Add Link</span></a>
             </div>
+            <img src="" alt="" class="responsive-img center" height="150">
           </div>
           <div class="icon-column z-depth-1">
               <i class="material-icons">text_format</i>
@@ -85,6 +77,18 @@
 
 
       </div>
+      <!-- Fab Starts  -->
+      <div class="fixed-action-btn fabMore">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">more_vert</i>
+        </a>
+        <ul class="fab_in">
+          <li><a class="btn-floating red"><i class="material-icons">delete</i></i></a></li>
+          <li><a class="btn-floating teal"><i class="material-icons">save</i></a></li>
+          <li><a class="btn-floating green "><i class="material-icons">add</i></a></li>
+        </ul>
+      </div>
+      <!-- Fab Ends -->
     </div>
   </div>
 
@@ -96,7 +100,7 @@
 
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/post.js"></script>
 </body>

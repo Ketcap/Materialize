@@ -3353,16 +3353,16 @@ $(document).ready(function(){
     // jQuery reverse
     $.fn.reverse = [].reverse;
 
-    $(document).on('mouseenter.fixedActionBtn', '.fixed-action-btn', function(e) {
-      var $this = $(this);
-      openFABMenu($this);
-
-    });
-
-    $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn', function(e) {
-      var $this = $(this);
-      closeFABMenu($this);
-    });
+    // $(document).on('mouseenter.fixedActionBtn', '.fixed-action-btn', function(e) {
+    //   var $this = $(this);
+    //   openFABMenu($this);
+		//
+    // });
+		//
+    // $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn', function(e) {
+    //   var $this = $(this);
+    //   closeFABMenu($this);
+    // });
 
   });
 
