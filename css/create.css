@@ -1,3 +1,6 @@
+.card{
+  margin-bottom: 0 !important;
+}
 .card-action.row {
   margin-bottom: 0px !important;
   text-align: center;
@@ -12,9 +15,12 @@
   height: auto;
   max-height: 200px;
 }
-.fab_in
-{
+.fab_in{
   display: none;
+}
+
+.card-action > a {
+  text-align: center;
 }
 
 .fab_in > li > a{

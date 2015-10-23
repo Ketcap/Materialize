@@ -69,7 +69,14 @@
     }); */
 
     var fabStatus = false;
-    $(".fabMore > a.red").on("click",function(){
+    $(document).on("click",function(){
+      if(fabStatus){
+        $(".fabMore > a.red").trigger("click");
+      }
+    });
+
+    $(".fabMore > a.red").on("click",function(e){
+      e.stopPropagation();
       button = $(this);
       if(fabStatus){
         fabStatus = false;
@@ -151,6 +158,6 @@
         })
     }
 
-    $(window).on("scroll , touchmove",function () {
-        showElements();
-    });
+    // $(window).on("scroll , touchmove",function () {
+    //     showElements();
+    // });
